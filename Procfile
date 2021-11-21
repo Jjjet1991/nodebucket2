@@ -1,1 +1,1 @@
-web: npm run localhost
+web: npm run start:prod

@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "server": "nodemon ./server/app.js",
-    "start": "ng serve",
+    "start:prod": "ng build && node ./server/app.js",
     "localhost": "ng build && node ./server/app.js"
   },
   "private": true,
