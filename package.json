@@ -2,7 +2,7 @@
   "name": "nodebucket",
   "version": "0.0.0",
   "engines": {
-    "node": "^12.x"},
+    "node": "16.13.0"},
   "scripts": {
     "ng": "ng",
     "build": "ng build --prod",
@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "server": "nodemon ./server/app.js",
-    "start": "ng build",
+    "start": "ng serve",
     "localhost": "ng build && node ./server/app.js"
   },
   "private": true,
