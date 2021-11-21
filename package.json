@@ -11,8 +11,7 @@
     "e2e": "ng e2e",
     "server": "nodemon ./server/app.js",
     "start": "node ./server/app.js",
-    "localhost": "ng build && node ./server/app.js",
-    "heroku-postbuild": "ng build --configuration=production"
+    "localhost": "ng build && node ./server/app.js"
   },
   "private": true,
   "dependencies": {
