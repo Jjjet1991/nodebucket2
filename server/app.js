@@ -42,9 +42,9 @@ app.use('/', express.static(path.join(__dirname, '../dist/nodebucket')));
 /**
  * Variables
  */
-const PORT = process.env.PORT || 3000; // server port
+const port = process.env.port || 3000; // server port
 
-app.set("port", PORT);
+
 
 // Connect to MongoDB Database: nodebucket
 const conn = 'mongodb+srv://admin:topsecret@cluster0.cs04f.mongodb.net/nodebucket?retryWrites=true&w=majority';
@@ -288,6 +288,6 @@ catch(e){
 /**
  * Create and start server
  */
-http.createServer(app).listen(PORT, function() {
-  console.log(`Application started and listening on port: ${PORT}`)
+http.createServer(app).listen(port, function() {
+  console.log(`Application started and listening on port: ${port}`)
 }); // end http create server function
