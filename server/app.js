@@ -24,7 +24,6 @@ const { requiredPaths } = require('../src/app/models/item');
 const { findById } = require('../src/app/models/employee');
 const { Router } = require('express');
 const { builtinModules } = require('module');
-const { debugPort } = require('process');
 
 
 
@@ -42,9 +41,7 @@ app.use('/', express.static(path.join(__dirname, '../dist/nodebucket')));
 /**
  * Variables
  */
-const port = process.env.port || 3000; // server port
-
-
+const port = process.env.PORT || 3000; // server port
 
 // Connect to MongoDB Database: nodebucket
 const conn = 'mongodb+srv://admin:topsecret@cluster0.cs04f.mongodb.net/nodebucket?retryWrites=true&w=majority';
