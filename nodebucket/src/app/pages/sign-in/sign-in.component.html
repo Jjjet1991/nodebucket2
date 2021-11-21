@@ -1,0 +1,44 @@
+<!--/*
+=====================================================
+; Title: Web 450 nodebucket
+; Author: Professor Krasso
+; Date 21 November 2021
+; Modified By: Jourdan Neal
+; Description: Deployment, completed project. Tasks can be created by the user
+; from there moved between To Do, Doing and Done columns. Tasks can be deleted
+; by selecting the trash can icon. Tasks can also be re-arranged within each column.
+; Users sign in and the signed in under the profile icon.
+=====================================================
+*/-->
+
+<div fxLayout= "column">
+  <div fxFlex *ngIf="error" class="message-error">
+    {{ error }}
+  </div>
+<!--Card for sign in Page-->
+  <mat-card fxFlex class="sign-in-container">
+    <mat-card-title>
+      Employee Sign-in Page
+    </mat-card-title>
+<!--Must enter valid id for button to enable button.-->
+    <mat-card-subtitle>
+      You must enter a valid employee ID to proceed
+    </mat-card-subtitle>
+<!--Submit button to run login()-->
+    <form [formGroup]="form" (ngSubmit)="login(); form.reset();">
+      <mat-card-content>
+        <mat-form-field>
+          <!--EmpId input field-->
+          <input matInput
+          [formControl]="form.controls['empId']"
+          placeholder="Employee ID" />
+        </mat-form-field>
+      </mat-card-content>
+
+      <mat-card-actions algin="end">
+        <!--Sign-in button invalid if empId is invalid.-->
+        <button type="submit" fxFlex mat-raised-button color="primary" [disabled]="!form.valid">Sign-in</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,72 @@
+<!--/*
+=====================================================
+; Title: Web 450 nodebucket
+; Author: Professor Krasso
+; Date 21 November 2021
+; Modified By: Jourdan Neal
+; Description: Deployment, completed project. Tasks can be created by the user
+; from there moved between To Do, Doing and Done columns. Tasks can be deleted
+; by selecting the trash can icon. Tasks can also be re-arranged within each column.
+; Users sign in and the signed in under the profile icon.
+=====================================================
+*/-->
+
+<div fxLayout="column">
+
+    <!-- navigation -->
+    <nav fxFlex>
+      <mat-toolbar>
+        <!-- navbar container -->
+        <div class="navbar-container">
+          <!-- logo -->
+          <button class="logo" routerLink="/" mat-button>nodebucket</button>
+
+          <button class="navbar-link" routerLink="/" mat-button>Home</button>
+          <button class="navbar-link" mat-button routerLink="/about">About</button>
+          <!--Router link for Contact Page-->
+          <button class="navbar-link" mat-button routerLink="/contact">Contact Us</button>
+        </div>
+        <!--menu to show isLoggedIn value and allow for sign-out-->
+        <div fxFlex></div>
+
+        <div *ngIf="isLoggedIn">
+
+          <button mat-icon-button [matMenuTriggerFor]= "profileMenu" aria-label="User profile menu">
+            <!--mat-icon for the profile Menu-->
+            <mat-icon>perm_identity</mat-icon>
+          </button>
+
+          <!--profile menu-->
+          <mat-menu #profileMenu>
+            <p style="padding:10px;">Signed in as {{ name }}</p>
+            <mat-divider></mat-divider>
+            <!--Button to signOut-->
+            <button mat-menu-item (click)="signOut()">
+              <mat-icon>logout</mat-icon>
+              <span>Sign out</span>
+            </button>
+          </mat-menu>
+        </div>
+
+      </mat-toolbar>
+    </nav>
+
+    <!-- main content -->
+    <div fxFlex>
+      <main class="main-content" fxFlex="100%;">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+
+    <!-- footer -->
+    <div fxFlex>
+      <footer class="footer">
+        <mat-toolbar class="footer-content">
+          <p>
+            &copy; {{year | date: 'yyyy'}} - nodebucket - <a href="https://www.bellevue.edu/" class="bu-link" target="_blank">Bellevue University</a>
+          </p>
+        </mat-toolbar>
+      </footer>
+    </div>
+
+  </div>

@@ -1,0 +1,86 @@
+/*
+=====================================================
+; Title: Web 450 nodebucket
+; Author: Professor Krasso
+; Date 21 November 2021
+; Modified By: Jourdan Neal
+; Description: Deployment, completed project. Tasks can be created by the user
+; from there moved between To Do, Doing and Done columns. Tasks can be deleted
+; by selecting the trash can icon. Tasks can also be re-arranged within each column.
+; Users sign in and the signed in under the profile icon.
+=====================================================
+*/
+
+.main-welcome {
+  margin-top: 30px;
+}
+
+.title {
+  text-align: center;
+  font-weight: lighter;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+}
+
+/*Style for the container with button inside.*/
+.create-button {
+  width:85%;
+  margin: 3% auto;
+  padding: 20px;
+}
+
+/*Button to add task*/
+.add-task{
+  border: 1px solid black;
+  font-size: 25px;
+  padding: 5px;
+  background-color: rgb(37, 150, 190);
+}
+
+
+/*todo column*/
+.todo-column {
+  min-height: auto;
+  margin: 10px;
+  padding: 5px;
+}
+
+/*done column*/
+.done-column {
+  min-height: auto;
+  margin: 10px;
+  padding: 5px;
+}
+
+.doing-column {
+  min-height: auto;
+  margin: 10px;
+  padding: 5px;
+}
+
+/*task-card styling*/
+.task-card {
+  margin-bottom:15px;
+  border: 1px black solid;
+  background-color: rgb(37, 150, 190);
+}
+
+/*card-title*/
+.mat-card-title {
+  text-decoration: underline;
+  font-size: 25px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  }
+
+/*mat-icon styling*/
+.mat-icon {
+  font-size: 30px;
+  height: 30px ;
+  width: 30px;
+  color: black;
+  margin: 20px;
+  }

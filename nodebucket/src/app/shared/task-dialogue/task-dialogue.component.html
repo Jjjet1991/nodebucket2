@@ -1,0 +1,25 @@
+<!--/*
+=====================================================
+; Title: Web 450 nodebucket
+; Author: Professor Krasso
+; Date 21 November 2021
+; Modified By: Jourdan Neal
+; Description: Deployment, completed project. Tasks can be created by the user
+; from there moved between To Do, Doing and Done columns. Tasks can be deleted
+; by selecting the trash can icon. Tasks can also be re-arranged within each column.
+; Users sign in and the signed in under the profile icon.
+=====================================================
+*/-->
+
+<h2 mat-dialog-title>Add new task +</h2>
+
+<mat-dialog-content [formGroup]="taskForm">
+  <mat-form-field style="width:200px;">
+    <input type="text" placeholder="Enter a task name.." matInput formControlName="text" (keydown.enter)="createTask()" />
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button [disabled]="!taskForm.valid" (click)="createTask()">Create task</button>
+</mat-dialog-actions>

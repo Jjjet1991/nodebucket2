@@ -1,0 +1,52 @@
+/*
+=====================================================
+; Title: Web 450 nodebucket
+; Author: Professor Krasso
+; Date 21 November 2021
+; Modified By: Jourdan Neal
+; Description: Deployment, completed project. Tasks can be created by the user
+; from there moved between To Do, Doing and Done columns. Tasks can be deleted
+; by selecting the trash can icon. Tasks can also be re-arranged within each column.
+; Users sign in and the signed in under the profile icon.
+=====================================================
+*/
+
+.logo {
+    margin-left: 75px;
+    font-size: 24px;
+    font-weight: lighter;;
+  }
+
+  .navbar-container {
+    padding: 5px;
+  }
+
+  .navbar-link {
+    font-size: 24px;
+    font-weight: lighter;
+  }
+
+  .main-content {
+    padding-left: 30px;
+  }
+
+  .footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .footer-content {
+    font-size: 16px;
+    font-weight: lighter;
+    padding-left: 100px;
+    letter-spacing: 3px;
+  }
+
+  .bu-link {
+    text-decoration: none;
+  }
+
+  .bu-link:hover {
+    text-decoration: underline;
+  }
